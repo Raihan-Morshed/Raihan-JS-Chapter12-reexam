@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-commerce website</title>
+    <style>
+
+      body
+      {
+          background: #1cf7c2 url(e-commerce1.jpg);
+          background-repeat: no-repeat;
+          background-position: 50% 0%; 
+
+      }
+      #hline
+      {
+        text-shadow:5px 5px 10px red;
+        margin: 20px 500px;
+        font-size: 100px;
+        position: fixed;
+      }
+      .sidenav 
+      {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: green;
+        overflow-x: hidden;
+        transition: 2s;
+        padding-top: 60px;
+      }
+      .sidenav a 
+      {
+        padding: 8px 8px 8px 100px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 1s
+      }
+      .sidenav a:hover, .offcanvas a:focus
+      {
+        color: #f1f1f1;
+      }
+      .sidenav .closebtn 
+      {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      #sidebar
+      {
+        padding: 10px;
+        margin-left:1395px;
+        margin-top: -50px;
+      }
+        
+    </style>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+</head>
+<body>
+    <p id="hline">Online Shopping</p>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="bag.html">Bag</a>
+      <a href="shoes.html">Shoes</a>
+      
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+    <script>
+      function openNav() {
+          document.getElementById("mySidenav").style.width = "330px";
+      }
+      function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+
+    <div id="sidebar">
+      <strong>Cart</strong>
+      <br>
+      <br>
+      <strong>List of Selected Items:</strong>
+          <table border="1" width="200" Height="50">
+            <tr>
+              <th>Purchased Item</th>
+              <th>Price</th>
+            </tr>
+          </table>
+        <label><h3>Total Amount is : 0 </h3></label>
+    </div>
+</body>
+</html>
+
+

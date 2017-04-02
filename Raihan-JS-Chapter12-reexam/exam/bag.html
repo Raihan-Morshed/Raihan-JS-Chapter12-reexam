@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bag</title>
+        <link rel="stylesheet" type="text/css" href="bag.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+          compute();
+          function compute(){
+          $("input").click(function(){
+             var order = document.forms[0];
+             var orderProduct = "";
+             var orderPrice = "";
+             var totalPrice = 0;
+             var price = 0;
+             for (var i = 0; i <order.length; i++) {
+               
+               if (order[i].checked) {
+                var item = order[i].value;
+
+                  if (item == "bag-1"){
+                  price = 200;
+                } else if (item == "bag-2"){
+                  price = 500;
+                } else if (item == "bag-3"){
+                  price = 1000;
+                } else if (item == "bag-4"){
+                  price = 2000;
+                } else if (item == "bag-5"){
+                  price = 400;
+                } else if (item == "bag-6"){
+                  price = 400;
+                } else if (item == "bag-7"){
+                  price = 300;
+                } else if (item == "bag-8"){
+                  price = 450;
+                } else if (item == "bag-9"){
+                  price = 240;
+                } else if (item == "bag-10"){
+                  price = 400;
+                } else if (item == "bag-11"){
+                  price = 450;
+                } else if (item == "bag-12"){
+                  price = 350;
+                } else if (item == "bag-13"){
+                  price = 550;
+                } else if (item == "bag-14"){
+                  price = 650;
+                } else if (item == "bag-15"){
+                  price = 600;
+                } else if (item == "bag-16"){
+                  price = 560;
+                } else if (item == "bag-17"){
+                  price = 470;
+                } else if (item == "bag-18"){
+                  price = 390;
+                } else if (item == "bag-19"){
+                  price = 420;
+                } else if (item == "bag-20"){
+                  price = 440;
+                } 
+
+               
+                orderProduct = orderProduct + "<ul>" + order[i].value + "</ul>";
+                orderPrice = orderPrice + "<ul>" + price + "</ul>";
+                totalPrice = totalPrice + price;
+                  $("#amount").text(totalPrice);
+               }
+             }
+             $("#productlists").html(orderProduct);
+             $("#priceList").html(orderPrice);
+          });
+        }
+        var startListNumber = 0;
+        var stopListNumber = 5;
+
+        $("#showMoreList").click(function(){
+              $.ajax({
+                  type: "GET",
+                  url: "http://localhost/exam/itemList_bag.html",
+                  success: function(html){
+                    var a = $(html);
+                    var b = a.filter("#moreItem");
+                    var c = b.slice(startListNumber,stopListNumber);
+                    $("#items").append(c);
+                    startListNumber +=5;
+                    stopListNumber +=5;
+                    compute();
+                  }
+              });
+          });
+        $("#amount").hide();  
+        $("#totalAmount").click(function(){
+            $("#amount").toggle();
+          });
+      });
+      </script>
+
+</head>
+<body>
+    
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="bag.html">Bag</a>
+    <a href="shoes.html">Shoes</a>    
+    </div>
+
+    <p id="hline">Online Shopping</p>
+
+      <div id="productList">
+        <form method="GET" action="" onSubmit="return false;" id="items">
+
+        <div id="bag-1_label">
+          <label for="bag-1">
+          <input type="checkbox" id="bag-1" name="order" value="bag-1"/><br>
+          <img src="http://localhost/exam/bag/bag-1.jpg" style="width:150px; height:150px"><hr noshade>
+          bag-1<br>$200
+          </label> 
+        </div><br>
+
+        <div id="bag-2_label">
+        <label for="bag-2">
+            <input type="checkbox" id="bag-2" name="order" value="bag-2"/><br>
+            <img src="http://localhost/exam/bag/bag-2.jpg" style="width:150px; height:150px">
+            <hr noshade>bag-2<br>$500
+        </label>
+        </div><br>
+
+        <div id="bag-3_label">
+        <label for="bag-3">
+            <input type="checkbox" id="bag-3" name="order" value="bag-3"/><br>
+            <img src="http://localhost/exam/bag/bag-3.jpg" style="width:150px; height:150px"><hr noshade>bag-3<br>$1000
+        </label>
+        </div><br>
+
+        <div id="bag-4_label">
+        <label for="bag-4">
+            <input type="checkbox" id="bag-4" name="order" value="bag-4"/><br>
+            <img src="http://localhost/exam/bag/bag-4.jpg" style="width:150px; height:150px"><hr noshade>bag-4<br>$2000
+        </label>
+        </div><br>
+
+        <div id="bag-5_label">
+        <label for="bag-5">
+            <input type="checkbox" id="bag-5" name="order" value="bag-5"/><br>
+            <img src="http://localhost/exam/bag/bag-5.jpg" style="width:150px; height:150px"><hr noshade>bag-5<br>$400
+        </label>
+        </div><br>
+
+
+        </form>
+        <button id="showMoreList">Display More Item</button><br><br>
+        <button type="button" id="totalAmount">Add to Cart</button>
+      </div><br/>
+
+
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "330px";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+
+      
+    <div id="sidebar">
+      <strong>Cart</strong>
+      <br>
+      <br>
+      <strong>List of Selected Items:</strong><br>
+      <table rules="all" frame="box" width="200" Height="50">
+            <tr>
+              <th>Purchased Item</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td id="productlists">
+              </td>
+              <td id="priceList">
+              </td>
+            </tr>
+      </table>
+        <label><h3>Total Amount is : <label id="amount">0</label></h3></label>
+    </div>
+</body>
+</html>

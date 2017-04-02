@@ -1,0 +1,205 @@
+body{
+          background: #1cf7c2; 
+          background-repeat: no-repeat;
+          background-position: 47% 0%;
+
+        }
+      #whitebox{
+        background-color: green;
+      }
+      #hline{
+        margin: 0px 480px -80px 440px;
+        text-shadow:5px 5px 10px red;
+        font-size: 100px;
+      }
+      .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: green;
+          overflow-x: hidden;
+          transition: 2s;
+          padding-top: 60px;
+      }
+      .sidenav a {
+          padding: 8px 8px 8px 100px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: .5s
+      }
+      .sidenav a:hover, .offcanvas a:focus{
+          color: #f1f1f1;
+      }
+      .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+      }
+        #sidebar{
+          padding: 10px;
+          margin-left:1330px;
+          margin-top: -50px;
+        }
+       
+        #productList{
+          position: absolute;
+          background-image: url(white_background.jpg);
+          padding: 10px 15px 130px 15px;
+          margin-left: 375px;
+          margin-right: 490px;
+          margin-top: 100px;
+        } 
+        #productList #shoes-1_label {
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: 0 0 -138.5px 0;
+        }
+        #productList #shoes-2_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 162px;
+        }
+        #productList #shoes-3_label {
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 324px;
+        }
+        #productList #shoes-4_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 486px;
+        }
+        #productList #shoes-5_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 648px;
+        }
+        #productList #shoes-6_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: 150px 0 -138.5px 0;
+        }
+         #productList #shoes-7_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138px 0 -138.5px 162px;
+        }
+         #productList #shoes-8_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 324px;
+        }
+         #productList #shoes-9_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 486px;
+        }
+         #productList #shoes-10_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 648px;
+        }
+        #productList #shoes-11_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: 150px 0 -138.5px 0;
+        }
+         #productList #shoes-12_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138px 0 -138.5px 162px;
+        }
+         #productList #shoes-13_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 324px;
+        }
+         #productList #shoes-14_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 486px;
+        }
+         #productList #shoes-15_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 648px;
+        }
+        #productList #shoes-16_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: 150px 0 -138.5px 0;
+        }
+         #productList #shoes-17_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138px 0 -138.5px 162px;
+        }
+         #productList #shoes-18_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 324px;
+        }
+         #productList #shoes-19_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 486px;
+        }
+         #productList #shoes-20_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 648px;
+        }
+        #showMoreList{
+        margin-top: 135px;
+        width: 805px;
+        height: 40px; 
+        }
+        #content{
+          background-image: url(e-commerce1.jpg);
+          background-repeat: no-repeat;
+          position: absolute;
+          height: 100%;
+        }
+        input[type=checkbox] + label
+         {
+             background: #999;
+             height: 16px;
+             width: 16px;
+             display:inline-block;
+             padding: 0 0 0 0px;
+         }
+         input[type=checkbox]:checked + label
+          {
+              background: #0080FF;
+              height: 16px;
+              width: 16px;
+              display:inline-block;
+              padding: 0 0 0 0px;
+          }
